@@ -236,3 +236,163 @@ table.results {
 .strong {
   font-weight: 700;
 }
+
+/* ---------------- 顶层导航 ---------------- */
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0;
+}
+
+.tab {
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 9px 20px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 15px;
+}
+
+.tab:hover {
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.tab-active {
+  color: var(--text);
+  background: var(--panel);
+  border-color: var(--line);
+  font-weight: 600;
+}
+
+.view-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+/* ---------------- 接缝扫描：双槽位 ---------------- */
+
+.slots {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.slot {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slot-loaded {
+  border-color: rgba(62, 207, 142, 0.55);
+}
+
+.slot-error {
+  border-color: rgba(255, 107, 107, 0.55);
+  background: rgba(255, 107, 107, 0.06);
+}
+
+.slot h3 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.slot-body {
+  flex: 1;
+}
+
+.slot-status {
+  margin: 0;
+}
+
+.slot-status.ok {
+  color: var(--ok);
+}
+
+.slot-status.err {
+  color: var(--err);
+}
+
+.slot-status.busy {
+  color: var(--warn);
+}
+
+.slot-count {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.slot-error .error-list {
+  margin-top: 6px;
+  max-height: 180px;
+}
+
+.slot-arrow {
+  align-self: center;
+  font-size: 26px;
+  color: var(--muted);
+}
+
+/* ---------------- 接缝结果 ---------------- */
+
+.seam-joined {
+  border-color: rgba(62, 207, 142, 0.55);
+}
+
+.seam-none {
+  border-color: rgba(255, 200, 87, 0.5);
+}
+
+.seam-num-ok {
+  color: var(--ok) !important;
+}
+
+.seam-num-warn {
+  color: var(--warn) !important;
+}
+
+.metric-text {
+  font-size: 14px !important;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.seam-note {
+  margin: 4px 0 12px;
+}
+
+.context-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.context-table th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.context-table td {
+  padding: 3px 12px;
+  border-bottom: 1px solid rgba(44, 56, 80, 0.5);
+}
+
+.context-table tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
