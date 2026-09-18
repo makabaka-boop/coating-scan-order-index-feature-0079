@@ -236,3 +236,176 @@ table.results {
 .strong {
   font-weight: 700;
 }
+
+/* ---- 顶层导航 ---- */
+
+.topnav {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 12px;
+}
+
+.nav-btn {
+  border-radius: 999px;
+  padding: 6px 18px;
+  color: var(--muted);
+}
+
+.nav-btn:hover {
+  color: var(--text);
+}
+
+.nav-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- 扫描片段接缝 ---- */
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.slot-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: var(--panel);
+}
+
+.slot-card.slot-error {
+  border-color: rgba(255, 107, 107, 0.55);
+}
+
+.slot-card.slot-ready {
+  border-color: rgba(62, 207, 142, 0.45);
+}
+
+.slot-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.slot-head h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.slot-body {
+  margin-top: 10px;
+  min-height: 30px;
+}
+
+.slot-loading {
+  color: var(--warn);
+  margin: 0;
+}
+
+.slot-ok {
+  color: var(--ok);
+  margin: 0;
+}
+
+.slot-error-lead {
+  margin: 0 0 6px;
+  color: var(--err);
+  font-size: 13px;
+}
+
+.phase-banner {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.phase-label {
+  font-weight: 600;
+}
+
+.phase-matching .phase-label {
+  color: var(--warn);
+}
+
+.phase-seam .phase-label {
+  color: var(--ok);
+}
+
+.phase-no-overlap .phase-label {
+  color: var(--muted);
+}
+
+.seam-result h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.seam-ok {
+  border-color: rgba(62, 207, 142, 0.45);
+}
+
+.seam-ok h2 {
+  color: var(--ok);
+}
+
+.seam-none h2 {
+  color: var(--muted);
+}
+
+.file-name {
+  font-size: 14px !important;
+  word-break: break-all;
+}
+
+.formula {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.context-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.context-block h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.chip.hit {
+  border-color: var(--ok);
+  color: var(--ok);
+  font-weight: 700;
+}
